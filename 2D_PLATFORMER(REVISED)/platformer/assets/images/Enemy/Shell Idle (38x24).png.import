@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb61ufja23jp0"
-path="res://.godot/imported/Walking_KG_1.png-d923b958ff21c042b22081e2a5ffa4bf.ctex"
+uid="uid://dqrf1a5j2pahb"
+path="res://.godot/imported/Shell Idle (38x24).png-866181d520990d113e9f0cbe49e2cbf5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Walking_KG_1.png"
-dest_files=["res://.godot/imported/Walking_KG_1.png-d923b958ff21c042b22081e2a5ffa4bf.ctex"]
+source_file="res://assets/images/Enemy/Shell Idle (38x24).png"
+dest_files=["res://.godot/imported/Shell Idle (38x24).png-866181d520990d113e9f0cbe49e2cbf5.ctex"]
 
 [params]
 

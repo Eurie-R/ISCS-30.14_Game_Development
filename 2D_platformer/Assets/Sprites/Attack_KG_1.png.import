@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://clgusnp547h1k"
-path="res://.godot/imported/Attack_KG_1.png-510d06fe4914fcc8c28438622e9cb9f3.ctex"
+path="res://.godot/imported/Attack_KG_1.png-df714a345b9dd3b7110b7508e7d530c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Knight_player/Attack_KG_1.png"
-dest_files=["res://.godot/imported/Attack_KG_1.png-510d06fe4914fcc8c28438622e9cb9f3.ctex"]
+source_file="res://Assets/Sprites/Attack_KG_1.png"
+dest_files=["res://.godot/imported/Attack_KG_1.png-df714a345b9dd3b7110b7508e7d530c0.ctex"]
 
 [params]
 

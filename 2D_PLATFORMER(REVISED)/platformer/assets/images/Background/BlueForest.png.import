@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb61ufja23jp0"
-path="res://.godot/imported/Walking_KG_1.png-d923b958ff21c042b22081e2a5ffa4bf.ctex"
+uid="uid://da6sl3n0pxdmg"
+path="res://.godot/imported/BlueForest.png-034ded2ecc35540c5dddcf885bc4f27c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Walking_KG_1.png"
-dest_files=["res://.godot/imported/Walking_KG_1.png-d923b958ff21c042b22081e2a5ffa4bf.ctex"]
+source_file="res://assets/images/Background/BlueForest.png"
+dest_files=["res://.godot/imported/BlueForest.png-034ded2ecc35540c5dddcf885bc4f27c.ctex"]
 
 [params]
 
