@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MoveData" format=3 uid="uid://cmaxocwh3wlqe"]
+
+[ext_resource type="Script" uid="uid://cdtsuib1mpmpd" path="res://scripts/data/move_data.gd" id="1_pam8b"]
+
+[resource]
+script = ExtResource("1_pam8b")
+move_name = "Bite"
+description = "enemy attack"
+power = 20
+accuracy = 95
+metadata/_custom_type_script = "uid://cdtsuib1mpmpd"

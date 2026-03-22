@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://csal1n2eaxmdb"]
+
+[ext_resource type="Script" uid="uid://k0kvrgtwd5hs" path="res://scripts/data/item_data.gd" id="1_mdq4l"]
+
+[resource]
+script = ExtResource("1_mdq4l")
+item_name = "Mana Potion"
+description = "restores 30 MP"
+effect_type = 1
+potency = 30
+metadata/_custom_type_script = "uid://k0kvrgtwd5hs"

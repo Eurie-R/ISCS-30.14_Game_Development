@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://drp14jjdw8mhd"]
+
+[ext_resource type="Script" uid="uid://cdtsuib1mpmpd" path="res://scripts/data/move_data.gd" id="1_2a261"]
+[ext_resource type="Resource" uid="uid://cmaxocwh3wlqe" path="res://resources/moves/bite.tres" id="2_cwen5"]
+[ext_resource type="Script" uid="uid://c5sfbatxl7cjl" path="res://scripts/data/character_data.gd" id="2_qhovq"]
+[ext_resource type="Resource" uid="uid://bkp4v51d7low1" path="res://resources/moves/howl.tres" id="3_ty4sj"]
+
+[resource]
+script = ExtResource("2_qhovq")
+character_name = "Shadow Wolf"
+max_hp = 70
+max_mp = 10
+attack = 13
+defense = 6
+speed = 16
+is_player = false
+moves = Array[ExtResource("1_2a261")]([ExtResource("2_cwen5"), ExtResource("3_ty4sj")])
+metadata/_custom_type_script = "uid://c5sfbatxl7cjl"

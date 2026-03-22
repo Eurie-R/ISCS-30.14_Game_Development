@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MoveData" format=3 uid="uid://bcvm3b4vogrg5"]
+
+[ext_resource type="Script" uid="uid://cdtsuib1mpmpd" path="res://scripts/data/move_data.gd" id="1_p16vl"]
+
+[resource]
+script = ExtResource("1_p16vl")
+move_name = "Shield Bash"
+description = "Bash enemy with shield"
+power = 15
+accuracy = 90
+status_effect = 2
+status_chance = 30
+metadata/_custom_type_script = "uid://cdtsuib1mpmpd"

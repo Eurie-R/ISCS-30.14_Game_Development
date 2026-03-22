@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dtby273lft0dw"]
+
+[ext_resource type="Script" uid="uid://k0kvrgtwd5hs" path="res://scripts/data/item_data.gd" id="1_kk1so"]
+
+[resource]
+script = ExtResource("1_kk1so")
+item_name = "Revival Herb"
+description = "revives a fallen ally"
+effect_type = 2
+metadata/_custom_type_script = "uid://k0kvrgtwd5hs"

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://c6drqxp8dv7lq"]
+
+[ext_resource type="Script" uid="uid://cdtsuib1mpmpd" path="res://scripts/data/move_data.gd" id="1_ffejx"]
+[ext_resource type="Resource" uid="uid://coth3jwxvcbpd" path="res://resources/moves/heavy_slash.tres" id="2_2ynml"]
+[ext_resource type="Script" uid="uid://c5sfbatxl7cjl" path="res://scripts/data/character_data.gd" id="2_hhjgp"]
+[ext_resource type="Resource" uid="uid://b5ugdp3f11jdg" path="res://resources/moves/dark_pulse.tres" id="3_hikab"]
+
+[resource]
+script = ExtResource("2_hhjgp")
+character_name = "Dark Knight"
+max_mp = 20
+attack = 16
+defense = 14
+speed = 5
+is_player = false
+moves = Array[ExtResource("1_ffejx")]([ExtResource("2_2ynml"), ExtResource("3_hikab")])
+metadata/_custom_type_script = "uid://c5sfbatxl7cjl"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="MoveData" format=3 uid="uid://cpnys2wcefyyk"]
+
+[ext_resource type="Script" uid="uid://cdtsuib1mpmpd" path="res://scripts/data/move_data.gd" id="1_jcwqo"]
+
+[resource]
+script = ExtResource("1_jcwqo")
+move_name = "Fireball"
+description = "ball of fire"
+move_type = 1
+power = 30
+accuracy = 90
+metadata/_custom_type_script = "uid://cdtsuib1mpmpd"

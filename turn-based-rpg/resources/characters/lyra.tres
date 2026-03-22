@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://bf4iytpfu66fm"]
+
+[ext_resource type="Script" uid="uid://cdtsuib1mpmpd" path="res://scripts/data/move_data.gd" id="1_alera"]
+[ext_resource type="Script" uid="uid://c5sfbatxl7cjl" path="res://scripts/data/character_data.gd" id="2_0e513"]
+[ext_resource type="Resource" uid="uid://cpnys2wcefyyk" path="res://resources/moves/fireball.tres" id="2_ttsw2"]
+[ext_resource type="Resource" uid="uid://ced63jknqmuev" path="res://resources/moves/heal.tres" id="3_bxae2"]
+[ext_resource type="Resource" uid="uid://cif8cmnq1vwld" path="res://resources/moves/thunder.tres" id="4_ngq6a"]
+[ext_resource type="Resource" uid="uid://r21apccc6f0q" path="res://resources/moves/defend.tres" id="5_oay5t"]
+[ext_resource type="Resource" uid="uid://bmkupkra3s6aj" path="res://resources/moves/charge.tres" id="6_m6qc1"]
+
+[resource]
+script = ExtResource("2_0e513")
+character_name = "Lyra"
+max_hp = 80
+max_mp = 60
+attack = 12
+defense = 7
+speed = 14
+moves = Array[ExtResource("1_alera")]([ExtResource("2_ttsw2"), ExtResource("3_bxae2"), ExtResource("4_ngq6a"), ExtResource("5_oay5t"), ExtResource("6_m6qc1")])
+metadata/_custom_type_script = "uid://c5sfbatxl7cjl"
