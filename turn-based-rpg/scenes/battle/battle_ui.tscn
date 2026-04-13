@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://b5aglfpq6ssu3"]
+
+[ext_resource type="Script" uid="uid://bkq4fb6xfivaa" path="res://scripts/ui/battle_log.gd" id="1_elpkr"]
+[ext_resource type="Script" uid="uid://bb8uv07oeowra" path="res://scripts/ui/command_menu.gd" id="2_bgiko"]
+[ext_resource type="Script" uid="uid://ck5ngo5f3y5nk" path="res://scripts/ui/target_selector.gd" id="3_keo60"]
+[ext_resource type="Script" uid="uid://b6rgps6hhloq4" path="res://scripts/ui/battle_hud.gd" id="4_xm0oj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0qfdl"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.03137255, 0.03137255, 0.05490196, 1)
+border_width_top = 2
+border_color = Color(0.11764706, 0.11764706, 0.19607843, 1)
+
+[node name="BattleUI" type="CanvasLayer" unique_id=1216199616]
+
+[node name="MainLayout" type="VBoxContainer" parent="." unique_id=191680828]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopSection" type="MarginContainer" parent="MainLayout" unique_id=188026083]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="EnemyStatus" type="HBoxContainer" parent="MainLayout/TopSection" unique_id=2060712006]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Spacer" type="Control" parent="MainLayout" unique_id=1353861476]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LogPanel" type="PanelContainer" parent="MainLayout" unique_id=1196846623]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+
+[node name="LogScroll" type="ScrollContainer" parent="MainLayout/LogPanel" unique_id=259540689]
+layout_mode = 2
+
+[node name="BattleLog" type="VBoxContainer" parent="MainLayout/LogPanel/LogScroll" unique_id=1633105512]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("1_elpkr")
+
+[node name="BottomSection" type="PanelContainer" parent="MainLayout" unique_id=1328891794]
+custom_minimum_size = Vector2(0, 180)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0qfdl")
+
+[node name="BottomLayout" type="HBoxContainer" parent="MainLayout/BottomSection" unique_id=1582023255]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="PlayerStatus" type="HBoxContainer" parent="MainLayout/BottomSection/BottomLayout" unique_id=1082198976]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="CommandMenu" type="VBoxContainer" parent="MainLayout/BottomSection/BottomLayout" unique_id=31543999]
+custom_minimum_size = Vector2(210, 0)
+layout_mode = 2
+script = ExtResource("2_bgiko")
+
+[node name="TargetSelector" type="VBoxContainer" parent="MainLayout/BottomSection/BottomLayout" unique_id=1514553234]
+custom_minimum_size = Vector2(230, 0)
+layout_mode = 2
+script = ExtResource("3_keo60")
+
+[node name="BattleHUD" type="Control" parent="." unique_id=2066307406]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_xm0oj")

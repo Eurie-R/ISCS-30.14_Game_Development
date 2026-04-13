@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="MoveData" format=3 uid="uid://ced63jknqmuev"]
+
+[ext_resource type="Script" uid="uid://cdtsuib1mpmpd" path="res://scripts/data/move_data.gd" id="1_w7jhd"]
+
+[resource]
+script = ExtResource("1_w7jhd")
+move_name = "Heal"
+description = "Restore HP"
+move_type = 2
+target_type = 2
+power = 40
+mp_cost = 6
+priority = 1
+metadata/_custom_type_script = "uid://cdtsuib1mpmpd"

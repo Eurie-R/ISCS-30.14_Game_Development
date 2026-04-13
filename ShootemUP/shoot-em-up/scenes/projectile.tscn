@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://footd5uebrdw"]
+
+[ext_resource type="Texture2D" uid="uid://ckr0i5836f7nf" path="res://assets/Bonus (player ship)/shooting laser-sheet.png" id="1_c8fcr"]
+[ext_resource type="Script" uid="uid://dn5ncqrijnqlq" path="res://scripts/projectile.gd" id="1_q3m7n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q3m7n"]
+size = Vector2(167, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_softn"]
+atlas = ExtResource("1_c8fcr")
+region = Rect2(0, 0, 211, 92)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6q2a6"]
+atlas = ExtResource("1_c8fcr")
+region = Rect2(211, 0, 211, 92)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_byeak"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_softn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6q2a6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Proj" type="Area2D" unique_id=1062856100 groups=["Projectile"]]
+script = ExtResource("1_q3m7n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=565422067]
+position = Vector2(-4.5, -0.5)
+shape = SubResource("RectangleShape2D_q3m7n")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1480941624]
+sprite_frames = SubResource("SpriteFrames_byeak")
+autoplay = "default"
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://rqm4jew3xsks"]
+
+[ext_resource type="Script" uid="uid://colrayt01tedv" path="res://Player/player.gd" id="1_l8h54"]
+[ext_resource type="Script" uid="uid://jrviaumovjo" path="res://Player/mouse.gd" id="2_4ntmi"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_62w18"]
+radius = 0.8
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_8a836"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_4ntmi"]
+margin = 0.01
+radius = 0.1
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_btcbx"]
+margin = 0.01
+radius = 0.1
+
+[node name="Player" type="CharacterBody3D" unique_id=557453031]
+script = ExtResource("1_l8h54")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1277667105]
+shape = SubResource("CapsuleShape3D_62w18")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=444497409]
+mesh = SubResource("CapsuleMesh_8a836")
+
+[node name="Camera" type="Node3D" parent="." unique_id=994278060 node_paths=PackedStringArray("character", "camera", "edge_spring_arm", "rear_spring_arm")]
+transform = Transform3D(0.99969035, 0.02290549, -0.009734271, -0.023140965, 0.99942404, -0.024809387, 0.009160398, 0.025026973, 0.99964494, 0, 0.70613194, 0.46098697)
+script = ExtResource("2_4ntmi")
+character = NodePath("..")
+camera = NodePath("EdgeSpringArm3D/RearSpringArm3D/Camera3D")
+edge_spring_arm = NodePath("EdgeSpringArm3D")
+rear_spring_arm = NodePath("EdgeSpringArm3D/RearSpringArm3D")
+rear_aim_arm_length = 0.8
+
+[node name="EdgeSpringArm3D" type="SpringArm3D" parent="Camera" unique_id=634091196]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+shape = SubResource("SphereShape3D_4ntmi")
+spring_length = 0.5
+
+[node name="RearSpringArm3D" type="SpringArm3D" parent="Camera/EdgeSpringArm3D" unique_id=958006979]
+transform = Transform3D(-4.371139e-08, 0, -1.0000002, 0, 1.0000002, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+shape = SubResource("SphereShape3D_btcbx")
+spring_length = 1.5
+
+[node name="Camera3D" type="Camera3D" parent="Camera/EdgeSpringArm3D/RearSpringArm3D" unique_id=1681126875]
+transform = Transform3D(0.99999994, -1.3737008e-08, -6.519258e-09, -1.1204975e-09, 0.9395615, 0.34238118, 9.313226e-10, -0.3423811, 0.93956107, 1.0000001, 2.1234646, 4.948829)

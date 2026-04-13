@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="MoveData" format=3 uid="uid://b5ugdp3f11jdg"]
+
+[ext_resource type="Script" uid="uid://cdtsuib1mpmpd" path="res://scripts/data/move_data.gd" id="1_7xa6q"]
+
+[resource]
+script = ExtResource("1_7xa6q")
+move_name = "Dark Pulse"
+description = "wave of dark energy at all foes"
+move_type = 1
+target_type = 1
+power = 15
+mp_cost = 5
+accuracy = 90
+metadata/_custom_type_script = "uid://cdtsuib1mpmpd"

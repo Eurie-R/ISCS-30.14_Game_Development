@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://baeknm75am04o"]
+
+[ext_resource type="Script" uid="uid://cdtsuib1mpmpd" path="res://scripts/data/move_data.gd" id="1_elxyn"]
+[ext_resource type="Resource" uid="uid://cs5oo4dvtljfe" path="res://resources/moves/slash.tres" id="2_3g546"]
+[ext_resource type="Script" uid="uid://c5sfbatxl7cjl" path="res://scripts/data/character_data.gd" id="2_g8vcy"]
+[ext_resource type="Resource" uid="uid://bcvm3b4vogrg5" path="res://resources/moves/shield_bash.tres" id="3_1jlce"]
+[ext_resource type="Resource" uid="uid://r21apccc6f0q" path="res://resources/moves/defend.tres" id="4_2dgex"]
+[ext_resource type="Resource" uid="uid://bmkupkra3s6aj" path="res://resources/moves/charge.tres" id="5_lskax"]
+
+[resource]
+script = ExtResource("2_g8vcy")
+character_name = "Kael"
+max_hp = 120
+max_mp = 20
+attack = 15
+defense = 12
+speed = 8
+moves = Array[ExtResource("1_elxyn")]([ExtResource("2_3g546"), ExtResource("3_1jlce"), ExtResource("4_2dgex"), ExtResource("5_lskax")])
+metadata/_custom_type_script = "uid://c5sfbatxl7cjl"
