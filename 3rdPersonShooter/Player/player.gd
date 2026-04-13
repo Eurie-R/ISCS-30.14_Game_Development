@@ -1,28 +1,54 @@
 extends CharacterBody3D
 
+@export var bullet_scene: PackedScene
 
-const SPEED = 5.0
-const JUMP_VELOCITY = 4.5
+@onready var cam: Camera3D = $Camera/Camera3D
+@onready var muzzle: Node3D = $WeaponMuzzle
+@export var reticle_screen_offset: Vector2 = Vector2(24, 0)
 
+func set_velocity_from_motion(vel: Vector3) -> void:
+	velocity = vel
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
-
-	# Handle jump.
-	if Input.is_action_just_pressed("Jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var input_dir := Input.get_vector("Left", "Right", "Up", "Down")
-	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
-
 	move_and_slide()
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("Shoot"):
+		fire()
+
+func fire() -> void:
+	if bullet_scene == null:
+		push_warning("bullet_scene is not assigned on Player.")
+		return
+
+	var target: Vector3 = get_aim_target()
+
+	var bullet = bullet_scene.instantiate()
+	get_tree().current_scene.add_child(bullet)
+
+	bullet.global_position = muzzle.global_position
+
+	var direction: Vector3 = (target - muzzle.global_position).normalized()
+
+	if bullet.has_method("setup"):
+		bullet.setup(direction)
+
+func get_aim_target() -> Vector3:
+	var screen_center: Vector2 = get_viewport().get_visible_rect().size * 0.5 + reticle_screen_offset
+
+	var ray_origin: Vector3 = cam.project_ray_origin(screen_center)
+	var ray_dir: Vector3 = cam.project_ray_normal(screen_center)
+
+	var ray_length: float = 1000.0
+	var ray_end: Vector3 = ray_origin + ray_dir * ray_length
+
+	var space_state := get_world_3d().direct_space_state
+	var query := PhysicsRayQueryParameters3D.create(ray_origin, ray_end)
+	query.exclude = [self]
+
+	var result := space_state.intersect_ray(query)
+
+	if result:
+		return result.position
+
+	return ray_end
