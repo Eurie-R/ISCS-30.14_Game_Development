@@ -12,7 +12,7 @@ config_version=5
 
 config/name="3rdPersonShooter"
 run/main_scene="uid://dl5aae63ukv4l"
-config/features=PackedStringArray("4.6", "GL Compatibility")
+config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://Assets/icon.svg"
 
 [input]

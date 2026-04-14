@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cf8handxthje"]
 
 [ext_resource type="Script" uid="uid://x5em1ctagse1" path="res://bullet.gd" id="1_v7oki"]
+[ext_resource type="PackedScene" path="res://Explosion/explosion.tscn" id="2_expl"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_v7oki"]
 
@@ -8,6 +9,7 @@
 
 [node name="Bullet" type="Area3D" unique_id=899599878]
 script = ExtResource("1_v7oki")
+explosion_scene = ExtResource("2_expl")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=831545246]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
